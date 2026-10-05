@@ -1,9 +1,11 @@
-##Premier League: Luck or skill?
+# Premier League: Luck or skill?
 
 **Question:** 
-Which PL Teams are genuinely good and which are lucky? how early in the season can we tell
+Which PL teams are genuinely good and which are lucky? how early in the season can we tell?
 
-In this project we are exploring this exact question. Can we determine from early on, if a team will be lucky, based on their previous seasons performances? 
+In this project we explore whether a team's results reflect real quality or luck — and whether we can spot overperformers early enough to predict a drop.
+
+Which teams are overperforming this season, and should we expect them to drop? 
 
 **Data:** Understat (team match-level xG and expected points), via `jeke-understat-scrapper`.
 ## Progress
