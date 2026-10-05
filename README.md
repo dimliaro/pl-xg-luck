@@ -27,7 +27,10 @@ persists across seasons. Can we predict this season's lucky teams?
 Luck should roughly cancel out accross each season. In 2025/26 it summed to -20.
 The reason: every draw removes 1 point from the league total (2 points for each team, leaving 1 out) 25-26 season had 104 draws versus 84 expected draws predicted by the model. To compare teams fairly, accross seasons, luck is adjusted by substracting each season's average ('luck_adj').
 
-![Actual vs expected points](pts_vs_xpts_all.png)
+**5 Largest**
+![Actual vs expected points](pts_vs_xpts_allNlargest.png)
+**5 Smallest**
+![Actual vs expected points](pts_vs_xpts_allNsmallest.png)
 
 **Findings** 
 - **Liverpool 2019-2020**  is the biggest overperofmer of the decade. 99 points from 74 expected points (+25).
