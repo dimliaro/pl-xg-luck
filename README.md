@@ -39,7 +39,7 @@ Luck sits on top of quality; it doesn't replace it.
 - **Aston Villa 2025/26** (+14) ranks 7th of the decade, and 2025/26 is the only season with two teams in the top 10 (Villa and Sunderland).
 - **Manchester United** appears twice in the top 10 (2017/18 and 2023/24), but six years apart with different managers and squads. Even though I'm a United fan, that's not evidence that overperformance persists.
 
-**Model limitation:** xG measures the quality of chances, not the quality of the goalkeeper
+**Model limitation:** xG measures the quality of chances, not the quality of the goalkeeper (David De Gea saving the Titanic!)
 facing them. An elite goalkeeper season shows up here as "luck", even though it's skill.
 
 **Next (Session 3):** Does luck in one season predict luck in the next? If it's mostly luck, the relationship should be close to zero.
