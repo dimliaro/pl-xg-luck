@@ -43,3 +43,37 @@ Luck sits on top of quality; it doesn't replace it.
 facing them. An elite goalkeeper season shows up here as "luck", even though it's skill.
 
 **Next (Session 3):** Does luck in one season predict luck in the next? If it's mostly luck, the relationship should be close to zero.
+
+
+- **Session 3:** Tested whether over/underperformance persists from one season to the next.
+
+**Method:** For every team, each season was paired with the same team's *next* season
+(a self-join on team and season + 1). This gives 187 pairs across 11 consecutive-season
+transitions; relegated teams drop out because they have no next Premier League season.
+I then measured the year-to-year correlation (Pearson r) of two things: quality (xPts)
+and luck (points above xPts, adjusted per season).
+
+![Year-to-year persistence](persistence.png)
+
+**Findings:**
+
+| Metric | Year-to-year r | p-value | Interpretation |
+|---|---|---|---|
+| Quality (xPts) | 0.76 | < 0.001 | Persists strongly |
+| Luck (pts − xPts) | 0.11 | 0.14 | No significant persistence |
+
+- Quality is stable: this season's xPts explain about 58% (r²) of the variation in next season's xPts.
+- Luck mostly disappears: a team that is +15 points "lucky" one season is expected to be only
+  about +1.5 the next. This is **regression to the mean**.
+- Example: Liverpool 2019/20, the luckiest season of the decade (+25), had roughly neutral luck
+  the following season.
+
+**Caveat:** A p-value of 0.14 doesn't prove luck has *zero* persistence — it means there's no
+significant evidence of it. If a skill component exists (e.g. elite finishing or goalkeeping),
+it is small. Relegated teams are also excluded from the pairs, which could slightly bias the result.
+
+**Conclusion so far:** When a team's points run well ahead of its xPts, the gap is mostly
+luck — expect it to shrink.
+
+**Next:** How early in a season can we tell? Using match-by-match data, check after how many
+games xPts becomes a better predictor of final points than the actual table.
