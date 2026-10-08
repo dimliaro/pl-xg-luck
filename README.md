@@ -77,3 +77,26 @@ luck — expect it to shrink.
 
 **Next:** How early in a season can we tell? Using match-by-match data, check after how many
 games xPts becomes a better predictor of final points than the actual table.
+
+
+- **Session 4:** How early in a season can we tell?
+
+**Method:** Ordered every team's matches within each season and computed running totals.
+At each point of the season (after 1, 2, ... 37 games), I compared two predictors of the
+points a team would earn in its *remaining* games: points so far (the table) and xPts so far.
+Predicting remaining points — rather than final points — avoids giving the table an unfair
+advantage, since final points already include points so far. This is a backtest: the
+"future" is already known for past seasons, so each predictor can be scored against it.
+
+![How early can we tell](how_early.png)
+
+**Findings:**
+- At almost every stage of the season, xPts so far predicts remaining points better than
+  the table does (e.g. after 10 games: r = 0.71 vs 0.68; after 19 games: r = 0.76 vs 0.70).
+- The advantage appears from the very first games and holds until the final rounds.
+- Both curves fall late in the season because the target itself gets noisier: predicting
+  points from a handful of remaining games is mostly luck. In the last game, neither
+  predictor does better than the other.
+
+**Conclusion:** If you want to know how a team will do from here on, look at its xPts,
+not its league position.
