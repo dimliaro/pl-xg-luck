@@ -100,3 +100,28 @@ advantage, since final points already include points so far. This is a backtest:
 
 **Conclusion:** If you want to know how a team will do from here on, look at its xPts,
 not its league position.
+
+- **Session 5:** Applied the findings to the live 2026/27 season (data as of <DATE>,
+  after 6 games for every team).
+
+**Method:** Projected each team's final points two ways, keeping the points already earned:
+current pace (points per game) vs xPts pace (xPts per game). Session 4 showed the xPts pace
+is the better predictor of remaining points.
+
+![2026/27 projections](projection_2026-10-13.png)
+
+**Projections as of <DATE>:**
+- **Expected to climb:** Nottingham Forest (5 pts now, ~14th → projected 4th, ~66 pts),
+  plus Bournemouth, Fulham, Tottenham and Sunderland.
+- **Expected to slow down:** Manchester City and Arsenal still projected 1st and 2nd,
+  but well below their current pace (City's current pace would mean 114 points).
+  Hull, Chelsea, Ipswich and Newcastle are projected to drop from mid-table.
+- **Projected bottom three:** Fulham, Aston Villa, Coventry. Aston Villa, last season's
+  biggest overperformer (+14), has lost both its luck and some of its quality
+  (1.34 → 0.96 xPts per game).
+
+**Limitations:** After only 6 games these projections are noisy: a single result moved
+Newcastle's projection by 4 points. They ignore the schedule and last season's quality,
+so they are probably too extreme in both directions.
+
+**Check-in:** I'll revisit these projections later in the season to see how they held up.
