@@ -127,7 +127,7 @@ so they are probably too extreme in both directions.
 **Check-in:** I'll revisit these projections later in the season to see how they held up.
 
 
-- **Model v2 (shrinkage):** After a few games, this season's xPts per game is noisy (Session 4),
+# Model v2 (shrinkage):** After a few games, this season's xPts per game is noisy (Session 4),
   while last season's quality is a strong guide (r = 0.76, Session 3). So v2 blends the two:
   last season's xPts per game counts like K extra "virtual games", and as real games are played,
   this season gradually takes over.
