@@ -125,3 +125,43 @@ Newcastle's projection by 4 points. They ignore the schedule and last season's q
 so they are probably too extreme in both directions.
 
 **Check-in:** I'll revisit these projections later in the season to see how they held up.
+
+
+- **Model v2 (shrinkage):** After a few games, this season's xPts per game is noisy (Session 4),
+  while last season's quality is a strong guide (r = 0.76, Session 3). So v2 blends the two:
+  last season's xPts per game counts like K extra "virtual games", and as real games are played,
+  this season gradually takes over.
+
+      blended rate = (xPts this season + K × last season's xPts per game) / (games played + K)
+
+  Promoted teams have no Premier League data from last season, so they use this season's rate only.
+  The original projection (13 Oct, v1) is kept unchanged for comparison.
+
+- **Session 6:** Is v2 actually better, and what is the right K?
+
+**Method:** Backtest on 11 past seasons (2015/16–2025/26, 220 team-seasons). For each team,
+time was frozen after 8 games and its remaining points were projected with K = 0, 5, 10, 20, 30, 50.
+K = 0 is v1 (no weight on last season). Projections were scored with MAE: the average number
+of points the projection was off by.
+
+![Tuning K](tune_k_after_8.png)
+
+**Findings:**
+
+| Projection | MAE (points) |
+|---|---|
+| Table pace (current points per game) | 13.31 |
+| v1: this season's xPts only (K = 0) | 9.26 |
+| v2: K = 10 | 7.54 |
+| v2: K = 20 or 30 | 7.44 |
+| v2: K = 50 | 7.50 |
+
+- Adding last season cuts the projection error by about 20% compared with v1, and by almost
+  half compared with the league table.
+- After 8 games, last season is worth roughly 20 games of this season. Any K between 10 and 30
+  performs almost the same; the big gain is going from K = 0 to any reasonable K.
+- Even the best model is off by about 7.4 points over the remaining 30 games: there is still
+  a lot of uncertainty in a football season.
+
+**Limitations:** Tested only at the 8-game mark. Promoted teams get no shrinkage, which may
+make them look worse than they are relative to other teams.
