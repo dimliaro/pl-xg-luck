@@ -165,3 +165,19 @@ of points the projection was off by.
 
 **Limitations:** Tested only at the 8-game mark. Promoted teams get no shrinkage, which may
 make them look worse than they are relative to other teams.
+
+**Across the season:** the same backtest after 4, 8, 15 and 25 games.
+
+| Games played | v1 (K = 0) | Best v2 | Improvement | Table pace |
+|---|---|---|---|---|
+| 4 | 13.12 | 8.67 (K = 20) | −34% | 20.45 |
+| 8 | 9.26 | 7.44 (K = 20–30) | −20% | 13.31 |
+| 15 | 5.91 | 5.42 (K = 10) | −8% | 6.80 |
+| 25 | 3.93 | 3.70 (K = 20–30) | −6% | 4.20 |
+
+Last season helps most early on and less as games accumulate. The best K stays around
+10–20 throughout, because the formula already reduces last season's weight as more games
+are played. v2 now uses K = 20.
+
+Note: MAE falls later in the season for every method simply because fewer games remain,
+so values are only comparable within the same row.
